@@ -1,0 +1,202 @@
+/*general page styling*/
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: linear-gradient(135deg,hsl(227, 92%, 30%),#063b9e 55%,#071638);
+    color:#b8ddff;
+    margin:0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/*Header*/
+header{
+    background-color: linear-gradient(blue,#013f79);
+    color:#b8ddff;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 4px solid black;
+}
+header h1{
+font-size: 38px;
+margin-bottom: 10px;
+}
+
+header p{
+    color:#b8ddff;
+    font-size: 18px;
+}
+
+/*Navigation*/
+nav{
+    background-color: #013f79;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul{
+    list-style: armenian;
+    padding: 0;
+    margin: 0;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a{
+    color: #00c3ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: hsl(219, 81%, 58%);
+}
+
+/*Main content*/
+
+main{
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 25px;
+}
+
+/*Section styling*/
+section{
+    background-color: linear-gradient(lch(12.18% 77.04 306.17), #2424b9);
+    margin: 25px 0;
+    padding: 25px;
+    border: 2px solid black;
+    border-radius: 12px;
+    min-width: 0; 
+}
+
+/*section heading*/
+
+section h2{ 
+    color:#2424b9;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+section h3{
+    color: hsl(209, 97%, 36%)
+}
+
+/*image*/
+
+img{
+    max-width: 100%;
+    height: auto;
+    border: 3px solid blue;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/*list*/
+section ul{
+    padding-left: 25px;
+}
+
+section li{ 
+    margin-bottom: 8px;
+}
+
+/*ID Selector*/
+#about{
+    border-top: 5px solid black;
+}
+
+/*footer*/
+
+footer{
+    background-color: hsl(244, 94%, 31%);
+    color: #b8ddff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 3px solid black;
+}
+
+/* Tablet responsive design*/
+@media screen and(max-width:900px) {
+    main{
+        gap: 15px;
+        padding: 15px;
+    }
+    section{
+        padding: 20px;
+    }
+    header h1{
+        font-size: 32px;
+    }
+}
+
+/*mobile responsive design*/
+@media screen and(max-width: 600px)
+{
+    main{
+        grid-template-columns: 1 fr;
+        padding: 12px;
+        margin: 15px auto;
+    }
+
+    section{
+        padding: 18px;
+    }
+    
+    header{
+        padding: 25px 15px;
+    }
+
+    header h1{
+        font-size: 27px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav li{
+        margin: 0;
+    }
+
+    body{
+        font-size: 14px;
+    }
+
+    footer{
+        padding: 15px;
+    }
+}
+
+/*responsive box model*/
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    overflox-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
